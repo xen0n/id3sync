@@ -119,7 +119,7 @@ def parse_year_field(b):
 
 
 def parse_genre_byte(b):
-    '''Parse the ID3v1 genre byte into the genre name.
+    '''Parse the ID3v1 genre byte into the corresponding genre name.
 
         >>> from __future__ import print_function
         >>> import six
@@ -265,7 +265,7 @@ def parse_ID3v1(tag, enc='utf-8', errors='replace'):
     year = parse_year_field(tag[93:97])
 
     # although overlapping with track number field in ID3v1.1, this is OK
-    # because track number is prefixed with a zero byte
+    # because track number, if present, is always prefixed with a zero byte
     comment = parse_text(tag[97:127], enc, errors)
     track = parse_track_field(tag[125:127])
 
