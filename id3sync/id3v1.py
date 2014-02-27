@@ -12,7 +12,7 @@ __all__ = [
 
 import six
 
-ID3V1_GENRE_LIST = [
+ID3V1_GENRE_LIST = (
         # 0-19
         'Blues', 'Classic Rock', 'Country', 'Dance', 'Disco',
         'Funk', 'Grunge', 'Hip-Hop', 'Jazz', 'Metal',
@@ -56,7 +56,7 @@ ID3V1_GENRE_LIST = [
         'Contemporary Christian', 'Christian Rock', 'Merengue', 'Salsa',
         'Thrash Metal',
         'Anime', 'JPop', 'Synthpop', 'Rock/Pop',
-        ]
+        )
 
 
 def parse_text(b, enc, errors='replace'):
